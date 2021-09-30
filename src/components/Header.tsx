@@ -1,17 +1,12 @@
-import { Flex, Input, Icon, HStack, Box, Text, Avatar } from '@chakra-ui/react';
-import { RiSearchLine, RiNotificationLine, RiMailLine } from 'react-icons/ri';
+import { Flex, Input, Icon } from "@chakra-ui/react";
+import { RiSearchLine } from "react-icons/ri";
+
+import { Profile } from "../components/Header/Profile";
 
 export function Header() {
   return (
     <>
-      <Flex
-        as="header"
-        w="100%"
-        align="center"
-        h="20"
-        mx="auto"
-        px="6"
-      >
+      <Flex as="header" w="100%" align="center" h="20" mx="auto" px="6">
         <Flex
           as="label"
           flex="1"
@@ -30,36 +25,12 @@ export function Header() {
             px="4"
             mr="4"
             placeholder="Buscar na plataforma"
-            _placeholder={{ color: 'gray.400' }}
+            _placeholder={{ color: "gray.400" }}
           />
           <Icon as={RiSearchLine} fontSize="20" />
         </Flex>
 
-        <Flex align="center" ml="auto">
-          <HStack
-            spacing="8"
-            mx="8"
-            pr="8"
-            py="1"
-            color="gray.700"
-            borderRightWidth={1}
-            borderColor="gray.700"
-          >
-            <Icon as={RiMailLine} fontSize="20" />
-            <Icon as={RiNotificationLine} fontSize="20" />
-          </HStack>
-
-          <Flex align="center">
-            <Box mr="4" textAlign="right">
-              <Text>Jonathan Doe</Text>
-              <Text color="gray.700" fontSize="small">
-                jonathan.doe@example.com
-              </Text>
-            </Box>
-
-            <Avatar size="md" name="Jonathan Doe" />
-          </Flex>
-        </Flex>
+        <Profile />
       </Flex>
     </>
   );

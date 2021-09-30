@@ -10,11 +10,15 @@ import {
   Td,
   Text,
   Avatar,
+  Button,
+  Icon,
 } from "@chakra-ui/react";
+import { RiPencilLine } from "react-icons/ri";
 
 import MyDashboardLayout from "../../layouts/MyDashboardLayout";
 
 import PageHeader from "../../components/PageHeader";
+import { Pagination } from "../../components/Pagination";
 
 export default function Users() {
   return (
@@ -37,6 +41,7 @@ export default function Users() {
                 Cadastro
               </Text>
             </Th>
+            <Th w="8"></Th>
           </Tr>
         </Thead>
 
@@ -47,7 +52,7 @@ export default function Users() {
             </Td>
             <Td>
               <HStack>
-                <Avatar name="Jonathan Doe" boxSize="10" />
+                <Avatar name="Jonathan Doe" boxSize="8" />
                 <Box>
                   <Text fontSize="14" fontWeight="bold">
                     Jonathan Doe
@@ -61,177 +66,22 @@ export default function Users() {
             <Td>
               <Text fontSize="14">26/09/2021</Text>
             </Td>
-          </Tr>
-          <Tr>
-            <Td px="6">
-              <Checkbox colorScheme="blue" />
-            </Td>
             <Td>
-              <HStack>
-                <Avatar name="Jonathan Doe" boxSize="10" />
-                <Box>
-                  <Text fontSize="14" fontWeight="bold">
-                    Jonathan Doe
-                  </Text>
-                  <Text fontSize="12" color="gray.400">
-                    jonathan.doe@example.com
-                  </Text>
-                </Box>
-              </HStack>
-            </Td>
-            <Td>
-              <Text fontSize="14">26/09/2021</Text>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td px="6">
-              <Checkbox colorScheme="blue" />
-            </Td>
-            <Td>
-              <HStack>
-                <Avatar name="Jonathan Doe" boxSize="10" />
-                <Box>
-                  <Text fontSize="14" fontWeight="bold">
-                    Jonathan Doe
-                  </Text>
-                  <Text fontSize="12" color="gray.400">
-                    jonathan.doe@example.com
-                  </Text>
-                </Box>
-              </HStack>
-            </Td>
-            <Td>
-              <Text fontSize="14">26/09/2021</Text>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td px="6">
-              <Checkbox colorScheme="blue" />
-            </Td>
-            <Td>
-              <HStack>
-                <Avatar name="Jonathan Doe" boxSize="10" />
-                <Box>
-                  <Text fontSize="14" fontWeight="bold">
-                    Jonathan Doe
-                  </Text>
-                  <Text fontSize="12" color="gray.400">
-                    jonathan.doe@example.com
-                  </Text>
-                </Box>
-              </HStack>
-            </Td>
-            <Td>
-              <Text fontSize="14">26/09/2021</Text>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td px="6">
-              <Checkbox colorScheme="blue" />
-            </Td>
-            <Td>
-              <HStack>
-                <Avatar name="Jonathan Doe" boxSize="10" />
-                <Box>
-                  <Text fontSize="14" fontWeight="bold">
-                    Jonathan Doe
-                  </Text>
-                  <Text fontSize="12" color="gray.400">
-                    jonathan.doe@example.com
-                  </Text>
-                </Box>
-              </HStack>
-            </Td>
-            <Td>
-              <Text fontSize="14">26/09/2021</Text>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td px="6">
-              <Checkbox colorScheme="blue" />
-            </Td>
-            <Td>
-              <HStack>
-                <Avatar name="Jonathan Doe" boxSize="10" />
-                <Box>
-                  <Text fontSize="14" fontWeight="bold">
-                    Jonathan Doe
-                  </Text>
-                  <Text fontSize="12" color="gray.400">
-                    jonathan.doe@example.com
-                  </Text>
-                </Box>
-              </HStack>
-            </Td>
-            <Td>
-              <Text fontSize="14">26/09/2021</Text>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td px="6">
-              <Checkbox colorScheme="blue" />
-            </Td>
-            <Td>
-              <HStack>
-                <Avatar name="Jonathan Doe" boxSize="10" />
-                <Box>
-                  <Text fontSize="14" fontWeight="bold">
-                    Jonathan Doe
-                  </Text>
-                  <Text fontSize="12" color="gray.400">
-                    jonathan.doe@example.com
-                  </Text>
-                </Box>
-              </HStack>
-            </Td>
-            <Td>
-              <Text fontSize="14">26/09/2021</Text>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td px="6">
-              <Checkbox colorScheme="blue" />
-            </Td>
-            <Td>
-              <HStack>
-                <Avatar name="Jonathan Doe" boxSize="10" />
-                <Box>
-                  <Text fontSize="14" fontWeight="bold">
-                    Jonathan Doe
-                  </Text>
-                  <Text fontSize="12" color="gray.400">
-                    jonathan.doe@example.com
-                  </Text>
-                </Box>
-              </HStack>
-            </Td>
-            <Td>
-              <Text fontSize="14">26/09/2021</Text>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td px="6">
-              <Checkbox colorScheme="blue" />
-            </Td>
-            <Td>
-              <HStack>
-                <Avatar name="Jonathan Doe" boxSize="10" />
-                <Box>
-                  <Text fontSize="14" fontWeight="bold">
-                    Jonathan Doe
-                  </Text>
-                  <Text fontSize="12" color="gray.400">
-                    jonathan.doe@example.com
-                  </Text>
-                </Box>
-              </HStack>
-            </Td>
-            <Td>
-              <Text fontSize="14">26/09/2021</Text>
+              <Button
+                as="a"
+                size="sm"
+                fontSize="sm"
+                colorScheme="blue"
+                leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
+              >
+                Editar
+              </Button>
             </Td>
           </Tr>
         </Tbody>
       </Table>
+
+      <Pagination />
     </>
   );
 }

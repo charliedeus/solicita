@@ -14,8 +14,16 @@ export default function SignIn() {
             margin="0 auto"
           />
           <Stack spacing="4">
-            <Input name="email" type="email" label="E-mail" />
-            <Input name="password" type="password" label="Senha" />
+            <Input
+              name="email"
+              type="email"
+              // label="E-mail"
+            />
+            <Input
+              name="password"
+              type="password"
+              // label="Senha"
+            />
           </Stack>
           <Button type="submit" mt="14" bg="gray.900" color="gray.50" size="lg">
             Entrar
